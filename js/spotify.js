@@ -45,18 +45,19 @@
 		var track_id = track_uri.substr(track_uri.length - 22);
 		$('#box_' + track_id).unbind('mouseenter mouseleave');
 		$('#play_' + track_id).append('<iframe src="https://embed.spotify.com/?uri='+ track_uri + ' "width="300" height="80" frameborder="0" allowtransparency="true"></iframe>');
-										}
+	}
 								
 	//3 - crea album player dentro il box
 	function create_album_player (track_uri,album_uri)	{
 		var track_id = track_uri.substr(track_uri.length - 22);
 		$('#box_' + track_id).unbind('mouseenter mouseleave');
-		$('#span_' + track_id).append('<div id="div_album_player_container' + track_id + '" class="album_player_container">' +
-											'<iframe src="https://embed.spotify.com/?uri='+ album_uri + ' " style="width:300px; height:380px; margin-top:-80px;" frameborder="0" allowtransparency="true"></iframe>' +
-										'</div>');
+		$('#span_' + track_id).append(
+									'<div id="div_album_player_container' + track_id + '" class="album_player_container">' +
+										'<iframe src="https://embed.spotify.com/?uri='+ album_uri + ' " style="width:300px; height:380px; margin-top:-80px;" frameborder="0" allowtransparency="true"></iframe>' +
+									'</div>');
 										
 		$('#div_album_player_container' + track_id).animate({top: '0px'});
-										}
+	}
 										
 	//4 - download cover
 	function cover_size_picker (thumb_uri,size)	{
@@ -184,7 +185,6 @@
 		pop_sum = 0;
 		avarage_pop = 0;
 		results_sum = 0;
-
 		$('#search_paragraph').hide();
 		$('#search_paragraph_loader').show();
 		$('#the_end').hide();
@@ -239,14 +239,22 @@ function morris () {
 			'#ffce73'
 		  ],
 
-		formatter: function (x) { return x + "%"} }).select(0);
-			if (avarage_pop == 0) {pop_lable = "Who knows?"}
-			else if (avarage_pop > 0 && avarage_pop <=5) {pop_lable = "Niche search"}
-			else if (avarage_pop > 5 && avarage_pop <=25) {pop_lable = "Refined"}
-			else if (avarage_pop > 25 && avarage_pop <=50) {pop_lable = "Mainstream"}
-			else {pop_lable = "Trivial Search"}
+		formatter: function (x) { return x + "%"} 
+	}).select(0);
+			
+	if (avarage_pop == 0) {
+		pop_lable = "Who knows?"
+	}else if (avarage_pop > 0 && avarage_pop <=5) {
+		pop_lable = "Niche search"
+	}else if (avarage_pop > 5 && avarage_pop <=25) {
+		pop_lable = "Refined"
+	}else if (avarage_pop > 25 && avarage_pop <=50) {
+		pop_lable = "Mainstream"
+	}else {
+		pop_lable = "Trivial Search"
+	}
 
-		$('#graph').append('<span class="graph_label">avarage popularity<br> (on ' + results_sum + ' results)</span>').fadeIn();
-		$('#graph').append('<span class="pop_label">' + pop_lable + '</span>').fadeIn();
-	  }
+	$('#graph').append('<span class="graph_label">avarage popularity<br> (on ' + results_sum + ' results)</span>').fadeIn();
+	$('#graph').append('<span class="pop_label">' + pop_lable + '</span>').fadeIn();
+}
 	
