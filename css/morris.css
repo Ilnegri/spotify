@@ -1,0 +1,39 @@
+#graph{
+	width:165px;
+	height:185px;
+	position: absolute;
+	right:5%;
+	top:0px;
+	z-index:3;
+}
+
+.graph_label{
+	width: 170px;
+	text-align:center;
+	margin: -17px auto;
+	display: block;
+}
+
+.pop_label{
+	width: 190px;
+	text-align:center;
+	display: block;
+	font-size: 1.5em;
+	margin-left:-105px;
+	margin-top:-105px;
+	-webkit-transform: rotate(270deg);
+	-moz-transform: rotate(270deg);
+	-o-transform: rotate(270deg);
+	writing-mode: lr-tb;
+}
+
+
+.morris-hover{position:absolute;z-index:1000;}
+.morris-hover.morris-default-style{border-radius:10px;padding:6px;color:#666;background:rgba(49, 49, 49, 0.8);border:solid 2px rgba(230, 230, 230, 0.8);font-family:sans-serif;font-size:12px;text-align:center;}
+.morris-hover.morris-default-style .morris-hover-row-label{font-weight:bold;margin:0.25em 0;}
+.morris-hover.morris-default-style .morris-hover-point{white-space:nowrap;margin:0.1em 0;}
+
+@media screen and (max-width: 640px) {
+#graph{
+	visibility:hidden;
+}
