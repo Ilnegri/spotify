@@ -1,6 +1,6 @@
 /* ===GLOBAL=== */
 
-/* Setto a 16px per forzare lo standard */
+/* Set to 16px per force the browser standard */
 html {
 	font-size:100.01%;
 	height:100%;
@@ -9,7 +9,7 @@ html {
 
 /* ===PRIMARY=== */
 
-/*Setto il font del body per avere una conversione 10 a 1 px em */
+/*Set the body font to have a direct conversion 10 to 1 px em */
 body {
 	font-size:62.5%;
 	height:100%;
@@ -42,8 +42,6 @@ h1 {
 	z-index: 2;	
 	margin-bottom:10px;
 	letter-spacing:0.2em;
-
-
 }
 
 @media screen and (max-width: 640px) {
@@ -57,7 +55,6 @@ h1 {
 	font-size: 3em;
 	padding-top:20px;
 	text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.3);
-
 }
 
 #header  h2{
@@ -72,7 +69,6 @@ h1 {
 	text-align:center;
 }
 
-
 #search_paragraph_loader {
 	margin-top:10px;
 	text-align:center;
@@ -80,12 +76,7 @@ h1 {
 }
 
 
-
-#info {
-	position: absolute;
-	margin-top:70px;
-	margin-left:20px;
-}
+/* ===MAIN CONTENT=== */
 
 #main_content {
 	background: #eeeeee;
@@ -117,7 +108,6 @@ h1 {
 	background: url('../images/blank-cd.png') center center no-repeat;
 }
 
-
 #main_content .box  span  h1{
 	text-align:center;
 	font-size:1.6em;
@@ -136,21 +126,21 @@ h1 {
 #main_content .box img {
 	position: absolute;
 	left: 0;
-		-webkit-transition: all 150ms ease-out;
-		-moz-transition: all 150ms ease-out;
-		-o-transition: all 150ms ease-out;
-		-ms-transition: all 150ms ease-out;	
+	-webkit-transition: all 150ms ease-out;
+	-moz-transition: all 150ms ease-out;
+	-o-transition: all 150ms ease-out;
+	-ms-transition: all 150ms ease-out;	
 	transition: all 150ms ease-out;
 }
 
 #main_content .box .caption {
 	background: rgba(49,49,49,0.9);
 	position: absolute;
-		-webkit-transition: all 150ms ease-out;
-		-moz-transition: all 150ms ease-out;
-		-o-transition: all 150ms ease-out;
-		-ms-transition: all 150ms ease-out;	
-		transition: all 150ms ease-out;
+	-webkit-transition: all 150ms ease-out;
+	-moz-transition: all 150ms ease-out;
+	-o-transition: all 150ms ease-out;
+	-ms-transition: all 150ms ease-out;	
+	transition: all 150ms ease-out;
 }
 
 
@@ -209,11 +199,10 @@ h1 {
 }
 
 #main_content .box .album_player_container iframe {
-background:#313131 url('../images/ajax-loader_player.gif') center 190px  no-repeat;
+	background:#313131 url('../images/ajax-loader_player.gif') center 190px  no-repeat;
 }
 
 
-/* di servizio */
 #loader{
 	display:none;
 	font-size:5em;
@@ -240,7 +229,7 @@ background:#313131 url('../images/ajax-loader_player.gif') center 190px  no-repe
 	text-decoration:none;
 }
 
-/* I form */ 
+/* ===FORM=== */
 
 input[type=text] {
 	border: 1px solid #929292;
@@ -276,19 +265,18 @@ button {
 }
 
 
-
 ::-webkit-scrollbar {
     width: 12px;
 }
  
-/* Track */
+
 ::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
     -webkit-border-radius: 10px;
     border-radius: 10px;
 }
  
-/* Handle */
+
 ::-webkit-scrollbar-thumb {
     -webkit-border-radius: 10px;
     border-radius: 10px;
@@ -298,5 +286,3 @@ button {
 ::-webkit-scrollbar-thumb:window-inactive {
 	background: rgba(228,103,49,0.4); 
 }
-
-/* ===GENERAL CLASSES=== */
